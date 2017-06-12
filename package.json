@@ -1,0 +1,31 @@
+{
+  "name": "My-Bucket",
+  "version": "1.0.0",
+  "description": "An app to log everything on your bucket list",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShoNozaki/My-Bucket.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShoNozaki/My-Bucket/issues"
+  },
+  "homepage": "https://github.com/ShoNozaki/My-Bucket#readme",
+  "dependencies": {
+    "angular": "^1.6.4",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "morgan": "^1.8.2",
+    "sequelize": "^4.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
