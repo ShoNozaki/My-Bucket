@@ -8,7 +8,7 @@ const morgan = require('morgan');
 
 app = express();
 
-app.use(express.static('../public'))
+app.use(express.static('public'))
   .use(bodyParser.json())
   .use(bodyParser.urlencoded({ extended: true }))
   .use(morgan('dev'))
