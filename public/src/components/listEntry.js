@@ -6,8 +6,7 @@ angular.module('bucketList')
           console.log('successfully deleted');
           listService.getListItems()
           .then((results) => {
-              console.log('after delete = ', results)
-              $scope.$parent.$parent.$parent.appCtrl.listItems = results;
+            this.items = results;
           })
       }).catch((err) => {
           console.log(err);
@@ -17,7 +16,8 @@ angular.module('bucketList')
 .directive('listEntry', function() {
     return {
         scope: {
-            listItem: '<'
+            listItem: '<',
+            items: '='
         },
         restrict: 'E',
         controller: 'listEntryController',

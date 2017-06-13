@@ -19,17 +19,8 @@ angular.module('bucketList')
           cost: 2000,
           url: 'http://www.icelandair.us/vacations/category/iceland-northern-lights/'
       }
-  ],
+  ]
 
-  this.getList = () => {
-      listService.getListItems()
-      .then((results) => {
-          console.log('results = ', results)
-          this.listItems = results;
-      }).catch((err) => {
-          console.log(err);
-      })
-  }
 })
 .directive('app', function() {
     return {

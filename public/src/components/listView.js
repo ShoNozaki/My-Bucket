@@ -2,7 +2,7 @@ angular.module('bucketList')
 .directive('listView', function() {
     return {
         scope: {
-            listItems: '<'
+            listItems: '='
         },
         restrict: 'E',
         controller: () => { console.log('inside list View') },

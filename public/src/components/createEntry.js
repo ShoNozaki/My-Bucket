@@ -8,7 +8,7 @@ angular.module('bucketList')
           listService.getListItems()
           .then((results) => {
               console.log('SUCCESS GET')
-              $scope.$parent.appCtrl.listItems = results
+            this.listItems = results;
           })
       }).catch((err) => {
           console.log(err);
@@ -18,7 +18,7 @@ angular.module('bucketList')
 .directive('createEntry', function() {
     return {
         scope:{
-            listItems: '<'
+            listItems: '='
         },
         restrict: 'E',
         controller: 'createEntryController',
