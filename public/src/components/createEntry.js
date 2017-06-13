@@ -1,13 +1,14 @@
 angular.module('bucketList')
-.controller('createEntryController', function(listService) {
+.controller('createEntryController', function($scope, listService) {
   this.listItem = {},
   this.createItem = function (data)  {
       listService.addListItem(data)
       .then(() => {
-          console.log('SUCCESS')
+          console.log('SUCCESS POST')
           listService.getListItems()
           .then((results) => {
-              console.log(results);
+              console.log('SUCCESS GET')
+              $scope.$parent.appCtrl.listItems = results
           })
       }).catch((err) => {
           console.log(err);
@@ -16,7 +17,9 @@ angular.module('bucketList')
 })
 .directive('createEntry', function() {
     return {
-        scope:{},
+        scope:{
+            listItems: '<'
+        },
         restrict: 'E',
         controller: 'createEntryController',
         controllerAs: 'createEntryCtrl',

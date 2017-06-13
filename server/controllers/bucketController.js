@@ -11,7 +11,7 @@ module.exports = {
         })
     },
     addlistItem: (req, res) => {
-        console.log(req.body)
+        // console.log(req.body)
         BucketList.create({  
             description: req.body.description,
             place: req.body.place,
