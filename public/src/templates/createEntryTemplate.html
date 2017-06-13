@@ -1,10 +1,12 @@
 <div class="jumbotron">
     <h3>Make List Item</h3>
   <form>
-    <input type="activity" id="inputActivity" class="form-control" placeholder="Activity">
-    <input type="location" id="inputLocation" class="form-control" placeholder="Location">
-    <input type="cost" id="inputCost" class="form-control" placeholder="Cost">
-    <input type="url" id="inputlink" class="form-control" placeholder="Link">
-    <button class="btn btn-lg btn-primary btn-block">Create Item</button>
+    <input type="activity" id="inputActivity" class="form-control" placeholder="Activity" ng-model="createEntryCtrl.listItem.description">
+    <input type="location" id="inputLocation" class="form-control" placeholder="Location" ng-model="createEntryCtrl.listItem.place">
+    <input type="cost" id="inputCost" class="form-control" placeholder="Cost" ng-model="createEntryCtrl.listItem.cost">
+    <input type="url" id="inputlink" class="form-control" placeholder="Link" ng-model="createEntryCtrl.listItem.url">
+    <button class="btn btn-lg btn-primary btn-block"
+    ng-click="createEntryCtrl.createItem(createEntryCtrl.listItem)"
+    >Create Item</button>
   </form>
 </div>

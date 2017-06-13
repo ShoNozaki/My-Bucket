@@ -11,6 +11,6 @@ const BucketListItem = db.define('listItem', {
 })
 
 // BucketListItem.belongsTo(bucketListType);
-BucketListItem.sync();
+BucketListItem.sync({ force: true });
 
 module.exports = BucketListItem;

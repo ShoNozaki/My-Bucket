@@ -8,8 +8,8 @@ angular.module('bucketList')
             console.log(err);
         })
   },
-  this.addListItem = function() {
-      return $http.post('/api/list')
+  this.addListItem = function(data) {
+      return $http.post('/api/list', data)
         .then((results) => {
             console.log(results);
         }).catch((err) => {
