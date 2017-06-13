@@ -5,6 +5,10 @@ angular.module('bucketList')
       listService.addListItem(data)
       .then(() => {
           console.log('SUCCESS')
+          listService.getListItems()
+          .then((results) => {
+              console.log(results);
+          })
       }).catch((err) => {
           console.log(err);
       })
