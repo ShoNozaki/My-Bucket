@@ -24,8 +24,9 @@ module.exports = {
         })
     },
     deleteItem: (req, res) => {
+        console.log('id= ',req.params[0].slice(1))
         BucketList.destroy({
-            where: {id: req.body.id}
+            where: {id: req.params[0].slice(1)}
         }).then(() => {
             res.send('deleted successfully');
         }).catch((err) => {
