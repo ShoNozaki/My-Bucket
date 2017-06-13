@@ -22,5 +22,14 @@ module.exports = {
         }).catch((err) => {
             res.send(err);
         })
+    },
+    deleteItem: (req, res) => {
+        BucketList.destroy({
+            where: {id: req.body.id}
+        }).then(() => {
+            res.send('deleted successfully');
+        }).catch((err) => {
+            res.send(err);
+        })
     }
 }

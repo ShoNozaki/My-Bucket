@@ -11,13 +11,13 @@ angular.module('bucketList')
           description: 'mt fuji',
           place: 'Japan',
           cost: 3000,
-          url: 'https://www.dobrazilright.com/rio-carnival-packages/'
+          url: 'http://www.japan-guide.com/e/e6901.html'
       },
       {
           description: 'Northern Lights',
           place: 'Iceland',
           cost: 2000,
-          url: 'http://www.redbullbcone.com/en_INT'
+          url: 'http://www.icelandair.us/vacations/category/iceland-northern-lights/'
       }
   ],
 
